@@ -1,3 +1,4 @@
+import 'package:anie/pages/login.dart';
 import 'package:anie/pages/sign_up.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const StartScreen(),
-        'sign_up': (context) => const SignUpPage()
+        'sign_up': (context) => const SignUpPage(),
+        'login': (context) => const LoginPage(),
       },
     );
   }

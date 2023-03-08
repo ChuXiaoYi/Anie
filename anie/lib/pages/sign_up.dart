@@ -164,12 +164,26 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         onPressed: () {
                           // Navigator.pushNamed(context, "sign_up");
-                          print("go to /")
+                          print("go to /");
                         },
                       ),
                     )
                   ]),
                 )),
+            Container(
+              margin: const EdgeInsets.only(top: 124),
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Already have an account?"),
+                  TextButton(
+                    child: const Text("Log in"),
+                    onPressed: () => Navigator.pushNamed(context, 'login'),
+                  )
+                ],
+              ),
+            )
           ])),
     );
   }
