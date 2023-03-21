@@ -1,14 +1,5 @@
-from typing import Generator
-
-from app.db.session import Session
+from fastapi import Request
 
 
-def get_db() -> Generator:
-    try:
-        db = Session()
-        yield db
-    finally:
-        db.close()
-
-
-
+def get_db(request: Request):
+    return request.state.db
