@@ -3,12 +3,13 @@ from fastapi import FastAPI, Request, Response
 from starlette.middleware.sessions import SessionMiddleware
 
 from app.api.api import router
+from app.config import config
 from app.db.session import SessionLocal
 
 app = FastAPI()
 app.include_router(router)
 
-app.add_middleware(SessionMiddleware, secret_key="7e3d8e2adf4cef91aab9a86030aded63158dd7b43a05e0901caaa970765a57dd",
+app.add_middleware(SessionMiddleware, secret_key=config.SECRET_KEY, session_cookie="anie",
                    max_age=None)
 
 

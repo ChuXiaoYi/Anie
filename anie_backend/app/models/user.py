@@ -9,5 +9,6 @@ class User(Base):
 
     username: Mapped[str] = mapped_column(String(255), comment="用户名")
     password: Mapped[str] = mapped_column(String(255), comment="密码")
-    phone: Mapped[str] = mapped_column(String(11), comment="电话号码")
+    wallet: Mapped[str] = mapped_column(String(100), comment="钱包地址")
+    phone: Mapped[str] = mapped_column(String(11), unique=True, comment="电话号码")
 

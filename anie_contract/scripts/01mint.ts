@@ -15,7 +15,7 @@ async function main() {
   );
   const tx = await contract.safeMint(
     "0xf81FC25d5cCa228B2AE0f8F72bCE5b368666c3B6",
-    "ipfs://bafkreiczpkuvksofgpye2uv4o7pgfbcf7czgw4kvuls64yubh7wkuzfjva"
+    "https://dweb.link/ipfs/bafybeifp5e6dm3fzsbdcqkre4x6rmpfjv2lqx3mnpjg6zd6ewdgil76ds4"
   );
   await tx.wait(1);
   console.log(`mint NFT: ${await contract.tokenURI(0)}`);
