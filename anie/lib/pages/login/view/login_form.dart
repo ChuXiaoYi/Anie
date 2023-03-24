@@ -32,7 +32,7 @@ class LoginForm extends StatelessWidget {
               SizedBox(height: 4),
               _LoginButton(),
               SizedBox(height: 4),
-              _WechatLoginButton(),
+              // _WechatLoginButton(),
             ],
           ),
         ),

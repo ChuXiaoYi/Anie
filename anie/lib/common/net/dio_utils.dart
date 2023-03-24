@@ -66,9 +66,7 @@ class HttpUtils {
           data: params,
         );
       }
-      print("原始请求结果：${res.toString()}");
       response = DioWrapper.responseWrapper(res);
-      print("请求结果：${response.toString()}");
     } catch (e) {
       response = DioWrapper.errorWrapper(e);
     } finally {

@@ -64,8 +64,7 @@ class _AppViewState extends State<AppView> {
     return MaterialApp(
       title: 'Anie',
       theme: ThemeData(
-        primaryColor: Color(0xFFFF4646),
-        focusColor: Color(0xFFFF4646),
+        primaryColor: Color(0xFFFFDAD9),
       ),
       navigatorKey: _navigatorKey,
       builder: (context, child) {

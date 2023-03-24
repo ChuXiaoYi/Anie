@@ -44,7 +44,6 @@ class AuthenticationBloc
       case AuthenticationStatus.unauthenticated:
         return emit(const AuthenticationState.unauthenticated());
       case AuthenticationStatus.authenticated:
-        print('认证啦');
         final user = await _tryGetUser();
         return emit(
           user != null

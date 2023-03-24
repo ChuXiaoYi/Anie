@@ -22,12 +22,8 @@ class AuthenticationRepository {
     }).then((response) {
       HttpUtils.obj.dio.options.headers['Authorization'] =
           'Bearer ${response.data['access_token']}';
+      _controller.add(AuthenticationStatus.authenticated);
     });
-
-    await Future.delayed(
-      const Duration(milliseconds: 300),
-      () => _controller.add(AuthenticationStatus.authenticated),
-    );
   }
 
   void logOut() {
