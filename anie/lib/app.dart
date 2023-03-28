@@ -29,7 +29,7 @@ class _AppState extends State<App> {
 
   @override
   void dispose() {
-    _authenticationRepository.dispose();
+    // _authenticationRepository.dispose();
     super.dispose();
   }
 

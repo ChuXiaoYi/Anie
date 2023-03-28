@@ -14,6 +14,8 @@ class Settings(BaseSettings):
 
     SECRET_KEY: str = Field(..., env='SECRET_KEY')
 
+    OPENAI_API_KEY: str = Field(..., env='OPENAI_API_KEY')
+
     class Config:
         env_file = '.env'
         env_file_encoding = 'utf-8'
